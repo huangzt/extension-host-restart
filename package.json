@@ -1,0 +1,42 @@
+{
+  "name": "extension-host-restart",
+  "displayName": "Extension Host Restart",
+  "description": "在状态栏显示重启 Extension Host 按钮",
+  "version": "1.0.0",
+  "publisher": "huangzt",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/huangzt/extension-host-restart"
+  },
+  "homepage": "https://github.com/huangzt/extension-host-restart#readme",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension-host-restart.restart",
+        "title": "重启 Extension Host"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "16.x",
+    "typescript": "^5.3.0"
+  }
+}
